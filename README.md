@@ -12,6 +12,9 @@ It provides an interactive dashboard where users can view their performance repo
 
 🔗 Live Project: https://karuna-karn.github.io/Career-Compass/
 
+# Screenshot
+! [Career Compass Screenshot](assests/screenshot.png)
+
 ## Features
 
 - Placement Readiness Score Calculation
