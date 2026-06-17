@@ -8,6 +8,10 @@ The application analyzes user inputs such as CGPA, projects, certifications, int
 
 It provides an interactive dashboard where users can view their performance report, track their progress, and download a placement readiness report in PDF format.
 
+## Live Demo
+
+🔗 Live Project: https://karuna-karn.github.io/Career-Compass/
+
 ## Features
 
 - Placement Readiness Score Calculation
