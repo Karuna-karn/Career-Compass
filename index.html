@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Placement Ready - Career Readiness Analyzer</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- jsPDF CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div>
+            <h1>🚀 Placement Ready</h1>
+            <p>Career Readiness Analyzer for Students</p>
+        </div>
+
+        <button id="themeToggle">
+            🌙 Dark Mode
+        </button>
+
+    </header>
+
+    <!-- Dashboard Cards -->
+    <section class="dashboard">
+
+        <div class="card">
+            <h3>Readiness Score</h3>
+            <h2 id="scoreCard">0%</h2>
+        </div>
+
+        <div class="card">
+            <h3>Placement Status</h3>
+            <h2 id="statusCard">-</h2>
+        </div>
+
+        <div class="card">
+            <h3>Skills Count</h3>
+            <h2 id="skillCount">0</h2>
+        </div>
+
+    </section>
+
+    <!-- Main Section -->
+    <div class="main-grid">
+
+        <!-- Left Panel -->
+        <div class="left-panel">
+
+            <div class="box">
+
+                <h2>Student Details</h2>
+
+                <form id="careerForm">
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter Your Name"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        step="0.01"
+                        id="cgpa"
+                        placeholder="Enter CGPA"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="projects"
+                        placeholder="Number of Projects"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="certifications"
+                        placeholder="Number of Certifications"
+                        required
+                    >
+
+                    <select id="internship" required>
+                        <option value="">
+                            Internship Status
+                        </option>
+                        <option value="Yes">
+                            Yes
+                        </option>
+                        <option value="No">
+                            No
+                        </option>
+                    </select>
+
+                    <button type="submit">
+                        Analyze Readiness
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Skills -->
+            <div class="box">
+
+                <h2>Select Skills</h2>
+
+                <div class="skills-grid">
+
+                    <label>
+                        <input type="checkbox" value="HTML">
+                        HTML
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="CSS">
+                        CSS
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="JavaScript">
+                        JavaScript
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="React">
+                        React
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Node.js">
+                        Node.js
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Express.js">
+                        Express.js
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="MongoDB">
+                        MongoDB
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="MySQL">
+                        MySQL
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Git">
+                        Git
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="GitHub">
+                        GitHub
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+
+            <!-- Progress -->
+            <div class="box">
+
+                <h2>Readiness Progress</h2>
+
+                <div class="progress-container">
+                    <div id="progressBar"></div>
+                </div>
+
+                <p id="scoreText">
+                    Your score will appear here.
+                </p>
+
+            </div>
+
+            <!-- Suggestions -->
+            <div class="box">
+
+                <h2>Recommendations</h2>
+
+                <ul id="recommendationList">
+
+                    <li>
+                        Complete the form to get recommendations.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Report -->
+            <div class="box">
+
+                <h2>Career Report</h2>
+
+                <div id="reportBox">
+
+                    <p>
+                        Generate your readiness report.
+                    </p>
+
+                </div>
+
+                <button id="downloadPdf">
+                    Download PDF Report
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
